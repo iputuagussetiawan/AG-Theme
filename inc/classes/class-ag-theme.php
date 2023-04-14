@@ -17,6 +17,7 @@ class AG_THEME {
 
 		// load class.
         Assets::get_instance();
+		Menus::get_instance();
 		$this->set_hooks();
 	}
 

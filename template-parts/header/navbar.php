@@ -46,3 +46,11 @@
         </div>
     </div>
 </nav>
+<?php
+wp_nav_menu(
+	[
+		'theme_location' => 'ag-header-menu',
+		'container_class' => 'main-menu'
+	]
+);
+?>
