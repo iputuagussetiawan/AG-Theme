@@ -1,0 +1,200 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use "../base/_animations.scss" as *;
+
+.ourbusiness{
+    @include imageRatio(1645,855,true);
+    @include maxWidthSection();
+
+    &__image-container{
+        position: relative;
+        max-width: 85%;
+    }
+
+    &__icon-down{
+        max-width: 12.81249vw; //246px
+        width: 12.81249vw;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        right:7.5vw; //144px;
+        z-index: 2;
+        top: -6.406249vw;
+    }
+
+    &__grid{
+        padding-top: 8.33vw;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap:0px 30px
+    }
+
+    &__left{
+        grid-column: 2/6;
+    }
+
+    &__right{
+        grid-column: 7/12;
+    }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__image-container{
+            max-width: 87%;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            padding-top: 24px;
+        }  
+        &__left,
+        &__right{
+            grid-column: 1/-1;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        
+    }
+
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap:0px
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        .section-title__side-right{
+            display: none;
+        }
+        &__grid{
+            padding-top: 60px;
+        }
+        &__left,
+        &__right{
+            grid-column: 1/-1;
+        }
+        &__image-container{
+           max-width: 100%;
+        }
+
+        &__icon-down{
+            max-width: 106px; //246px
+            width: 106px;
+            height: auto;
+            top: -53px;
+        }
+    }
+}
+
+.ourbusiness-two{
+    @include imageRatio(1090,619,true);
+    @include maxWidthSection();
+    position: relative;
+    background-color:$white;
+    padding-top:8.671875vw;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap:5.46875vw 30px
+    }
+
+    &__inner{
+        grid-column: 3/11;
+        text-align: center;
+    }
+
+    &__left{
+        grid-column: 2/6;
+    }
+
+    &__right{
+        grid-column: 7/12;
+    }
+
+    &__image-container{
+        position: relative;
+        grid-column: 3/11;
+
+        img{
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    &__play-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: 0.4s ease;
+		z-index: 3;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+            min-width: 65px;
+            min-height: 65px;
+			width: 5.729166vw;// 110px;
+			height:5.729166vw;// 110px;
+			border: 0.55rem solid $white;
+			border-radius: 50%;
+			animation: pulse-border 1.5s linear infinite;
+			animation-delay: 1s;
+		}
+
+		&::after {
+			animation-delay: 1.5s;
+		}
+
+		&:hover {
+			color: #fff;
+		}
+	}
+    &__play-icon{
+        min-width: 65px;
+        min-height: 65px;
+        width: 5.729166vw;
+        height: 5.729166vw;
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__inner{
+            grid-column: 2/12;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap:40px 0px
+        }
+        &__right,
+        &__left,
+        &__image-container,
+        &__inner{
+            grid-column: 2/12;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__right,
+        &__left,
+        &__image-container,
+        &__inner{
+            grid-column: 1/-1;
+        }
+    }
+}

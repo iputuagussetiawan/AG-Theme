@@ -1,0 +1,90 @@
+@use "_custom.scss";
+@use "base/_reset.scss";
+@use "base/_animations.scss";
+@use "base/_typography.scss";
+@use "layout/_header.scss";
+// @use "layout/_page-header.scss";
+@use "layout/_main.scss";
+@use "layout/_footer.scss";
+@use "layout/_section.scss";
+@use "layout/_form.scss";
+@use "components/_social-icons.scss";
+// @use "components/ui/_breadcrumb.scss";
+@use "components/ui/_buttons.scss";
+@use "components/ui/_burgermenu.scss";
+// @use "components/ui/_pagination.scss";
+// @use "components/ui/_loader.scss";
+.page-wrapper{
+	overflow: hidden;
+}
+
+.container {
+	position: relative;
+}
+
+@media (min-width: 576px) {
+	.container-xxl,
+	.container-xl,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container {
+		max-width: 93%;
+	}
+}
+
+@media (min-width: 1600px) {
+	.container-xxl,
+	.container-xl,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container {
+		max-width: 85%;
+	}
+}
+
+@media (min-width: 2560px) {
+	.container-xxl,
+	.container-xl,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container {
+		max-width: 1600px;
+	}
+}
+
+@media only screen and (max-width: 575.98px) {
+	.container {
+		padding: 0 24px;
+	}
+}
+
+.grecaptcha-badge {
+	display: none;
+}
+
+.order-6{
+	order: 6;
+}
+.order-7{
+	order: 7;
+}
+
+.screen-darken{
+	content: ''; 
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.4);
+	pointer-events: none;
+	z-index:10; opacity:1; 
+	visibility:visible;
+	position: fixed;
+  }
+  
+  .navbar{
+	z-index: 15;
+  }

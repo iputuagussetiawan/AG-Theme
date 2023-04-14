@@ -1,0 +1,57 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-location.scss' as *;
+
+.locations-free{
+   @include imageRatio(670,417);
+   position: relative;
+   padding-top: 11.5104166vw;
+   padding-bottom: 6.25vw;
+
+   &__grid{
+      @include d-grid();
+      margin-bottom: 8.95833vw;
+      align-items: center;
+   }
+
+   &__info-container{
+      grid-column: 2/6;
+   }
+   &__image-container{
+      grid-column: 7/12;
+   }
+   &__art-one{
+      position: absolute;
+      top: -110px;
+      left: -55px;
+      max-width: 11.354166vw;
+   }
+   &__art-two{
+      position: absolute;
+      bottom: -9.8958333vw;
+      left: -5.9375vw;
+      max-width: 25.9895833vw;
+   }
+
+   @media only screen and (max-width: 767.98px) {
+      padding-bottom: 60px;
+      .section-title{
+         text-align: center;
+      }
+      &__art-two{
+         display: none;
+      }
+      &__grid{
+         gap:40px 0px;
+      }
+      &__info-container{
+         grid-column: 1/-1;
+         order: 2;
+      }
+      &__image-container{
+         grid-column: 1/-1;
+         order: 1;
+      }
+   }
+
+}

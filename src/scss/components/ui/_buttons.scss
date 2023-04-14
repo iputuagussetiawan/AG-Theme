@@ -1,0 +1,334 @@
+@use "../../config/variable" as *;
+.btn-wrapper{
+    margin-top:3.125vw;// 60px;
+    width: 100%;
+    @media only screen and (max-width: 991.98px) {
+        margin-top:60px;
+    }
+}
+.btn{
+    display: inline-block;
+    padding: 16px 48px ;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 66px;
+    &.ja{
+        font-size: 13px;
+    }
+    @media only screen and (max-width: 1600px) {
+        font-size: 14px;
+        padding: 14px 42px ;
+        &.ja{
+            font-size: 10px;
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        padding: 8px 32px ;  
+    }
+}
+.btn-primary{
+    color: $white;
+    background-color:$primary-color;
+    border-color: $primary-color;
+    &:hover{
+        color: $white;
+        background-color: $primary;
+        border-color: $primary-color;
+    }
+    &:focus,
+    &:active{
+        color: $white !important;
+    }
+    &.disabled {
+        color: $white;
+    }
+}
+.btn-primary-outline{
+    position: relative;
+    color: $primary;
+    background-color:$white;
+    //border: 2px solid $primary;
+    overflow: hidden;
+    transition: 0.1s ease;
+    transition-delay: 0.1s;
+    background-color: transparent;
+    &::before{
+        position: absolute;
+        content: '';
+        top:0px;
+        right: 100%;
+        bottom: 0px;
+        left: 0px;
+        background-color: $primary;
+        border-radius: 66px;
+        transition: 0.4s ease;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 66px;
+        border: 2px solid $primary;
+    }
+    &:hover{
+        color: $white;
+        //border: 2px solid transparent;
+    }
+    &:hover::before{
+        right: 0px;
+    }
+    &:hover &__icon path{
+        stroke: $white;
+    }
+    &__icon{
+        top: -2px;
+        position: relative;
+    }
+    &__text{
+        position: relative;
+        z-index: 2;
+    }
+
+    // &:focus,
+    // &:active{
+    //     color: $white !important;
+    // }
+    // &.disabled {
+    //     color: $white;
+    // }
+}
+
+.btn-secondary-outline{
+    position: relative;
+    color: $white;
+    background-color:transparent;
+    border-color: $white;
+    border: none;
+    overflow: hidden;
+    transition: 0.1s ease;
+    transition-delay: 0.1s;
+    &::before{
+        position: absolute;
+        content: '';
+        top:0px;
+        right: 100%;
+        bottom: 0px;
+        left: 0px;
+        background-color: $white;
+        border-radius: 66px;
+        transition: 0.4s ease;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 66px;
+        border: 2px solid $white;
+    }
+    &:hover{
+        color: $primary;
+    }
+    &:hover::before{
+        right: 0px;
+    }
+    &:hover &__icon path{
+        stroke: $primary;
+    }
+    &__icon{
+        top: -2px;
+        position: relative;
+    }
+    &__text{
+        position: relative;
+        z-index: 2;
+    }
+}
+.btn-secondary{
+    background-color:$secondary;
+    color: $primary-color;
+    border-color: $secondary;
+    &:hover{
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+}
+.btn-warning{
+    background: #C19E74;
+    border: 1px solid #C19E74;
+    color: $white;
+    border: 1px solid #C19E74;
+    &:hover{
+        background-color: $white;
+        border: 1px solid #C19E74;
+        color: #C19E74;
+    }
+}
+.btn-warning-two{
+    background: #BA8A51;
+    border: 1px solid #BA8A51;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        border: 1px solid #be9665;
+        border: 1px solid #be9665;
+        color:#BA8A51;
+    }
+}
+.btn-success{
+    background-color:  #16B056;
+    border: 1px solid  #16B056;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        border: 1px solid  #16B056;
+        color: #16B056;
+    }
+}
+.btn-ripple {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    span {
+        position: absolute;
+        background: $white;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+        animation: ripple 1s linear infinite;
+    }
+}
+.whatapp-btn{
+    display: inline-block;
+    position: fixed;
+    bottom: 70px;
+    right: -100px;
+    width: 54px;
+    height: 54.32px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #0A990A;
+    border-radius: 16px 0 0 16px; ;
+    z-index: 100;
+    transition: 0.4s ease;
+    &:hover{
+        background-color: #11b911;
+    }
+    &.active{
+        right: 0px;
+    }
+    @media only screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+.scrolltop-btn{
+    display: inline-block;
+    position: absolute;
+    bottom: 200px;
+    right: 0px;
+    z-index: 100;
+    transition: 0.4s ease;
+    &.active{
+        bottom: 200px;
+    }
+    @media only screen and (max-width: 991.98px) {
+        display: none;
+    }
+}
+.button-gotop{
+    @media only screen and (max-width: 991.98px) {
+        &__svg{
+            max-width: 42px;
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__svg{
+            max-width: 32px;
+        }
+    }
+    
+}
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+/*-----------------------------------------
+//////////////// WHATAPPS /////////////////
+-----------------------------------------*/
+.btn-show-more,
+.btn-show-less{
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    color: #0BAC4B;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    @media only screen and (max-width: 575.98px) {
+        font-size: 10px;
+    }
+}
+.w3eden .btn{
+    font-family: $primary-font !important;
+    font-weight: 300px !important;
+}
+
+.play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s ease;
+    z-index: 3;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        min-width: 65px;
+        min-height: 65px;
+        width: 5.729166vw;// 110px;
+        height:5.729166vw;// 110px;
+        border: 0.55rem solid $white;
+        border-radius: 50%;
+        animation: pulse-border 1.5s linear infinite;
+        animation-delay: 1s;
+    }
+
+    &::after {
+        animation-delay: 1.5s;
+    }
+
+    &__icon{
+        min-width: 65px;
+        min-height: 65px;
+        width: 5.729166vw;
+        height: 5.729166vw;
+    }
+
+    &:hover {
+        color: #fff;
+    }
+}
+

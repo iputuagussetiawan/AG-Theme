@@ -1,0 +1,68 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+
+.about-profile{
+    position: relative;
+    background-color:$blue-300;
+    z-index: 1;
+    &__side-title{
+        bottom: unset;
+        top: 50%;
+    }
+    &__grid{
+        @include d-grid();
+    }
+    &__table{
+        grid-column: 2/12;
+    }
+
+    &__table-row{
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        gap: 24px;
+        color: $white;
+        border-bottom: 1px solid #2188ba;
+        padding: 2.0833vw 0px ;//40px 0px;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &__table-left,
+    &__table-middle,
+    &__table-right{
+        color: #f4f4f4;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap: 40px 0px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__table{
+            grid-column: 1/-1;
+        }
+    }
+
+    @media only screen and (max-width:575.98px) {
+        &__table-left{
+            color:#89AFCF;
+        }
+        &__table-row{
+            grid-template-columns: 1fr;
+            gap: 10px;
+            padding: 20px 0px;
+            p{
+                margin:0px
+            }
+            ul{
+                margin-bottom: 0px;
+            }
+        }
+        &__table-middle{
+            margin-bottom: -10px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+
+.about-header{
+    position: relative;
+    &__art-one{
+        position: absolute;
+        top: -24.95833vw;//-460px
+        right: -4.3229166vw;//-83px
+        max-width: 39.0104166vw;//749px
+    }
+    &__art-two{
+        position: absolute;
+        top: 40%;
+        right: 37%;
+        max-width: 3.4895833vw;//749px
+        transform: translateY(-50%);
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__art-two{
+            right: 40%;
+        }
+    }
+}

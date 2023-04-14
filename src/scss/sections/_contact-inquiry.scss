@@ -1,0 +1,51 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-location.scss' as *;
+
+.contact-inquiry{
+    overflow: hidden;
+    position: relative;
+    padding-top: 8.333vw;//160px
+    padding-bottom: 8.33333vw;//160px
+    background-color: #F2F9FF;
+    &__art-one{
+        position: absolute;
+        right: -22.1875vw;//426px
+        bottom:-11.6666vw ;
+        max-width: 42.1875vw;
+    }
+    &__side-title{
+        top: 30%;
+        bottom: unset
+    }
+
+    &__grid{
+        @include d-grid();
+    }
+    &__title-wrapper{
+        text-align: center;
+    }
+    &__title-wrapper,
+    &__form-container{
+        grid-column: 4/10;
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__title-wrapper,
+        &__form-container{
+            grid-column: 3/11;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__title-wrapper,
+        &__form-container{
+            grid-column: 1/-1;
+        }
+        &__art-one{
+            display: none;
+        }
+        &__grid{
+            gap: 0px;
+        }
+    }
+}

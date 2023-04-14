@@ -1,0 +1,54 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+@use "../components/sliders/_slider-learning.scss" as *;
+
+.about-learning{
+    position: relative;
+    @include imageRatio(579,544,true);
+    .swiper-wrapper {
+        -webkit-transition-timing-function:linear!important; 
+        -o-transition-timing-function:linear!important;
+        transition-timing-function:linear!important; 
+        transition: 0.3s ease;
+    }
+    &__art-one{
+        position: absolute;
+        top: -12.7604166vw;
+        left:-5.9375vw;
+        max-width: 26.1979166vw;
+    }
+    &__grid{
+        @include d-grid();
+        align-items: center;
+    }
+    &__image-container{
+        grid-column: 2/7;
+    }
+    &__info-container{
+        grid-column: 7/12;
+    }
+    &__swiper-container{
+        margin-top: 8.3333vw;
+        grid-column: 2/12;
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap: 40px 0px;
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__image-container{
+            grid-column: 1/-1;
+            margin-bottom: 60px;
+        }
+        &__info-container{
+            grid-column: 1/-1;
+        }
+        &__art-one{
+            position: absolute;
+            top: -155px;
+            left:-155px;
+            max-width: 349px;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+
+.perpose{
+    @include imageRatio(1090,570,true,contain);
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 13.020833vw 30px;//spacing row: 250px coloumn //30px
+    }
+
+    &__title-wrapper{
+        grid-column: 2/6;
+    }
+
+    &__info-container{
+        grid-column: 8/12;
+    }
+
+    &__image-container{
+        grid-column: 3/11;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__title-wrapper{
+            grid-column: 2/6;
+        }
+    
+        &__info-container{
+            grid-column: 7/12;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            gap: 13.020833vw 0px;//spacing row: 250px coloumn //30px
+        }
+
+        &__title-wrapper{
+            grid-column: 1/6;
+        }
+    
+        &__info-container{
+            grid-column: 7/13;
+        }
+        &__image-container{
+            grid-column: 1/13;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__grid{
+            gap: 0px 0px;//spacing row: 250px coloumn //30px
+        }
+        &__title-wrapper{
+            grid-column: 1/13;
+        }
+    
+        &__info-container{
+            grid-column: 1/13;
+            margin-bottom:60px;
+        }
+
+    }
+
+   
+}
+
+.purpose-two{
+    @include imageRatio(526,513,true,contain);
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap:30px;
+        align-items: center;
+    }
+
+    &__image-container{
+        grid-column: 8/12;
+    }
+
+    &__info-container{
+        grid-column: 2/7;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap:40px 0px;
+        }
+        &__image-container{
+            grid-column: 2/12;
+            margin: 0 auto;
+            order: 1;
+        }
+    
+        &__info-container{
+            grid-column: 2/12;
+            order: 2;
+        }
+    
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        @media only screen and (max-width: 767.98px) {
+            &__image-container{
+                margin: 0 auto;
+                grid-column: 1/-1;
+            }
+        
+            &__info-container{
+                grid-column: 1/-1;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-location.scss' as *;
+
+.contact-location{
+    position: relative;
+    padding-bottom: 7.5vw;//140px;
+    &__art-one{
+        position: absolute;
+        top:-5.20833vw;
+        left: -50px;
+        max-width: 7.0833vw;
+    }
+    &__side-title{
+        top: 70%
+    }
+    &__grid{
+        @include d-grid();
+    }
+    &__group{
+        grid-column: 2/12;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2.0833vw 4.375vw;
+    }
+
+    &__free-list{
+        padding: 0px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__free-item{
+        position: relative;
+        margin-right: 33px;
+        padding-left: 32px;
+    }
+    &__free-link{
+        font-size: 20px;
+        line-height: 38px;
+        color: $text-color;
+    }
+    &__free-icon{
+        position: absolute;
+        top: 4px;
+        left: 0px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+        &__free-link{
+            font-size: 1.04166vw;//20px;
+            line-height:2;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {+
+        &__free-link{
+            font-size: 14px;
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__list{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            gap: 0px;
+        }
+        &__group{
+            grid-column: 1/-1;
+        }
+        &__list{
+            gap: 40px;
+        }
+    }
+    @media only screen and (max-width: 575.98px) {
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

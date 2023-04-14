@@ -1,0 +1,120 @@
+@use "../config/_variable.scss" as *;
+
+label {
+	margin-bottom: 12px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 38px;
+	color: $text-color;
+
+
+	@media only screen and (max-width: 1600px) {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	@media only screen and (max-width: 1440px) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	@media only screen and (max-width: 1199.98px) {
+		font-size: 15px;
+	}
+}
+
+
+
+/*-----------------------------------------
+//////////////// FORM SETUP ///////////////
+-----------------------------------------*/
+
+.form-control-custom,
+.input-text  {
+	position: relative;
+	width: 100% !important;
+	padding: 12px 0px;
+	border-radius: 0px;
+	box-sizing: border-box;
+	transition: 0.4s ease;
+	border: none;
+	border-bottom:1px solid rgba(182, 182, 182, 0.47);
+	background-color: transparent;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	color: #b9b7bc;
+
+	&:focus {
+		border:none;
+		border-bottom:1px solid rgba(182, 182, 182, 0.47);
+		box-shadow: none;
+		outline: none;
+		background-color: transparent;
+		color: #b9b7bc;
+	}
+
+	&::placeholder{
+		color: $headlinetext-color;
+	}
+
+	&.wpcf7-not-valid{
+		padding-right: 42px;
+		background: url('https://api.iconify.design/ion/alert-circle.svg?color=%23cb3a31') no-repeat center center / contain;
+		background-repeat: no-repeat;
+		background-position: right 18px center;
+		background-size: 24px 24px;
+		border: 1px solid #CB3A31;
+	}
+
+	@media only screen and (max-width: 1440px) {
+		padding: 6px 14px;
+		font-size: 14px;
+	}
+}
+
+.form-select{
+	height: 54px;
+	padding-left: 0px;
+	border:none;
+	border-radius: 0px;
+	border-bottom:1px solid rgba(182, 182, 182, 0.47);
+	background-color: transparent;
+	color: #b9b7bc;
+	&:focus {
+		border: none;
+		border-bottom:1px solid rgba(182, 182, 182, 0.47);
+		box-shadow: none;
+		outline: none;
+		background-color: transparent;
+		color: #b9b7bc;
+	}
+
+	&::placeholder{
+		color: $headlinetext-color;
+	}
+
+	@media only screen and (max-width: 1440px) {
+		height: 42px;
+	}
+}
+
+.wpcf7-textarea{
+	max-height: 130px;
+}
+
+.wpcf7-not-valid-tip{
+	margin-top: 8px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #CB3A31;
+}
+
+/*-----------------------------------------
+//////////////////////////////// FORM SETUP
+-----------------------------------------*/
+
+.wpcf7-form-control-wrap{
+	position: relative;
+}
+

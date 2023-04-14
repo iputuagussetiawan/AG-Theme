@@ -1,0 +1,199 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+@use "../components/cards/card-quadrant" as *;
+
+.about-organization-wrapper{
+    position: relative;
+}
+
+.about-organization{
+    position: relative;
+    &__side-title{
+        top:20%;
+        right: 7.5%;
+        z-index: 2;
+    }
+    &__art-one{
+        position: absolute;
+        top: -5.645833vw;
+        left: -3.645833vw;
+        max-width: 10.05208vw
+    }
+    &__grid{
+        
+        @include d-grid();
+
+    }
+    &__title{
+        grid-column: 2/5;
+    }
+    &__content{
+        grid-column: 6/12;
+    }
+
+    &__quadran{
+        position: relative;
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 8.854166vw;
+        z-index: 3;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 42px;
+            left: 50%;
+            bottom: 42px;
+            width: 1px;
+            border:  1px dashed #D8E9F8;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 52px;
+            left: 52px;
+            height: 1px;
+            border:  1px dashed #D8E9F8;
+        }
+        
+    }
+
+    &__quadran-top,
+    &__quadran-left,
+    &__quadran-bottom,
+    &__quadran-right,
+    &__quadran-label-top,
+    &__quadran-label-right,
+    &__quadran-label-bottom,
+    &__quadran-label-left{
+        position: absolute;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 41px;
+        color: #5F6467;
+    }
+    &__quadran-top,
+    &__quadran-label-top{
+        top: 0px;
+        left: 50%;
+        transform: translateX(calc(-50% + 1px));
+    }
+
+    &__quadran-right,
+    &__quadran-label-right{
+        top: 50%;
+        right: 0px;
+        transform: translateY(calc(-50% + 1px));
+    }
+
+    &__quadran-bottom,
+    &__quadran-label-bottom{
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(calc(-50% + 1px));
+    }
+    &__quadran-left,
+    &__quadran-label-left{
+        top: 50%;
+        left: 0px;
+        transform: translateY(calc(-50% + 1px));
+    }
+
+    &__quadran-top{
+        top:42px;
+        
+    }
+    &__quadran-right{
+        right:52px;
+    }
+    &__quadran-bottom{
+        bottom: 42px;
+    }
+    &__quadran-left{
+        left: 52px;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap: 30px 0px;
+        }
+        &__quadran-top,
+        &__quadran-left,
+        &__quadran-bottom,
+        &__quadran-right,
+        &__quadran-label-top,
+        &__quadran-label-right,
+        &__quadran-label-bottom,
+        &__quadran-label-left{
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .section-title{
+            margin-bottom: 0px;
+        }
+        &__art-one{
+            display: none;
+        }
+        &__side-title-mobile{
+            grid-column: 1/-1;
+        }
+        
+        &__title{
+            grid-column: 1/-1;
+        }
+        &__content{
+            grid-column: 1/-1;
+        }
+        &__quadran{
+            grid-column: 2/12;
+            &::before{
+                top: 27px;
+                bottom: 27px;
+            }
+            &::after{
+                right: 42px;
+                left: 42px;
+            }
+        }
+
+        &__quadran-top{
+            top:16px;
+            
+        }
+        &__quadran-right{
+            right:32px;
+        }
+        &__quadran-bottom{
+            bottom: 16px;
+        }
+        &__quadran-left{
+            left: 32px;
+        }
+        &__quadran-label-top,
+        &__quadran-label-right,
+        &__quadran-label-bottom,
+        &__quadran-label-left{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        &__quadran-top,
+        &__quadran-left,
+        &__quadran-bottom,
+        &__quadran-right{
+            max-width: 8px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__quadran{
+            grid-column: 1/-1;
+        }
+    }
+
+
+}

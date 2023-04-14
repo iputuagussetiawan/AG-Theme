@@ -1,0 +1,51 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+
+.about-map{
+    @include imageRatio(1370,574);
+    position: relative;
+    background-color: #FAFAFA;
+    // background-color: #2067A5;
+    &__art-one{
+        position: absolute;
+        top: -11.979166vw;
+        left: -13.6979166vw;
+        max-width: 26.354166vw;
+    }
+    &__grid{
+        @include d-grid();
+    }
+    &__info-container{
+        grid-column: 4/10;
+        text-align: center;
+    }
+    &__image-container{
+        grid-column: 2/12;
+    }
+    &__info-container-left{
+        grid-column: 2/6;
+    }
+    &__info-container-right{
+        grid-column: 7/12;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap: 40px 0px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__art-one{
+            display: none;
+        }
+        &__info-container-left{
+            margin-bottom: -27px;
+        }
+        &__info-container,
+        &__info-container-left,
+        &__info-container-right{
+            grid-column: 1/-1;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+
+.about-welfare{
+    position: relative;
+    &__art-one{
+        position: absolute;
+        max-width: 34.79166vw;
+        bottom: -7.4479166vw;
+        right: -7.4479166vw;
+    }
+    &__side-title{
+        bottom: unset;
+        top:40%;
+    }
+    &__grid{
+        @include d-grid();
+    }
+    &__table{
+        grid-column: 2/12;
+    }
+    &__table-row{
+        padding: 2.08333vw 0px;
+        display: grid;
+        column-gap: 30px;
+        grid-template-columns: 1fr 3fr;
+        border-bottom: 1px solid #DFDFDF;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap: 40px 0px;
+        }
+    }
+    @media only screen and (max-width:767.98px) {
+        &__table{
+            grid-column: 1/-1;
+        }
+    }
+    @media only screen and (max-width: 575.98px) {
+        &__table-row{
+            padding: 20px 0px;
+            grid-template-columns: 1fr;
+        }
+        &__table-col{
+            &:first-child{
+                margin-bottom: 10px;
+            }
+            &:first-child .section-content{
+                color: #AEB1B2;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__art-one{
+            position: absolute;
+            max-width: 455px;
+            bottom: -100px;
+            right: -267px
+        }
+    }
+}

@@ -1,0 +1,173 @@
+/*-----------------------------------------
+/////////////// STR ANIMATIONS ////////////
+-----------------------------------------*/
+
+@keyframes beforeShape3 {
+	0% {
+		transform: translate(50px, 50px);
+	}
+
+	100% {
+		transform: translate(0px, -50px);
+	}
+}
+
+@keyframes pulse-border {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+.floating {
+	animation: floating 3s ease infinite;
+	will-change: transform;
+	&:hover {
+		animation-play-state: paused;
+	}
+}
+
+.rotate45 {
+	animation: rotate45 3s ease infinite;
+	will-change: transform;
+	&:hover {
+		animation-play-state: paused;
+	}
+}
+
+.rotate45-2 {
+	animation: rotate45 1.5s ease infinite;
+	will-change: transform;
+	&:hover {
+		animation-play-state: paused;
+	}
+}
+
+.rotate20 {
+	animation: rotate20 2s ease infinite;
+	will-change: transform;
+	&:hover {
+		animation-play-state: paused;
+	}
+}
+.rotateMin20 {
+	animation: rotatemin20 1.5s ease infinite;
+	will-change: transform;
+	&:hover {
+		animation-play-state: paused;
+	}
+}
+
+.floating-lg {
+	animation: floating-lg 3s ease infinite;
+}
+
+.floating-sm {
+	animation: floating-sm 2s ease infinite;
+}
+
+@keyframes floating-lg {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(25px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(15px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes floating-sm {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(5px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+
+
+@keyframes rotate45 {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(25deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes rotate20 {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes rotatemin20 {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes beforeShape3 {
+	0% {
+		transform: translate(50px, 50px);
+	}
+
+	100% {
+		transform: translate(0px, -50px);
+	}
+}
+
+@keyframes pulse-border {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+
+
+/*-----------------------------------------
+/////////////// END ANIMATIONS ////////////
+-----------------------------------------*/
