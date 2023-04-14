@@ -16,6 +16,7 @@ class AG_THEME {
         //wp_die( 'hallow' );
 
 		// load class.
+        Assets::get_instance();
 		$this->set_hooks();
 	}
 
