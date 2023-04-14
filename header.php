@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5b8ba26f1d64900985fcc53e8b9969ff3f4ccd3c
 <?php
 /**
  * Header template.
