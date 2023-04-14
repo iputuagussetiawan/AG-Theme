@@ -19,4 +19,6 @@
 		wp_body_open();
 	}
 ?>
-<header>Header</header>
+<header>
+	<?php get_template_part( 'template-parts/header/navbar' ); ?>
+</header>
