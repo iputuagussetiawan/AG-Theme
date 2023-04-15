@@ -117,7 +117,7 @@ function agtheme_the_excerpt( $trim_character_count = 0 ) {
 	$excerpt = substr( $excerpt, 0, $trim_character_count );
 	$excerpt = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
 
-	echo $excerpt . '[...]';
+	echo $excerpt . '...';
 }
 
 /**
@@ -130,7 +130,7 @@ function agtheme_the_excerpt( $trim_character_count = 0 ) {
 function agtheme_excerpt_more( $more = '' ) {
 
 	if ( ! is_single() ) {
-		$more = sprintf( '<button class="mt-3 btn btn-info"><a class="aquila-read-more text-white" href="%1$s">%2$s</a></button>',
+		$more = sprintf( '<a class="agtheme-read-more" href="%1$s">%2$s</a>',
 			get_permalink( get_the_ID() ),
 			__( 'Read more', 'ag-theme' )
 		);

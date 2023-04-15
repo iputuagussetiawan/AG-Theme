@@ -16,7 +16,7 @@
 			sprintf(
 				wp_kses(
 				/* translators: %s: Name of current post. */
-					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'aquila' ),
+					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ag-theme' ),
 					[
 						'span' => [
 							'class' => []
@@ -28,7 +28,7 @@
 		);
 		wp_link_pages(
 			[
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'aquila' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ag-theme' ),
 				'after'  => '</div>',
 			]
 		);
