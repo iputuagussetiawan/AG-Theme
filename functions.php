@@ -17,6 +17,7 @@ if ( ! defined( 'AG_DIR_URI' ) ) {
 }
 
 require_once AG_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once AG_DIR_PATH . '/inc/helpers/template-tags.php';
 
 // echo '<pre>';
 // print_r(AG_DIR_PATH);

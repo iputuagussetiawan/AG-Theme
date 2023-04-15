@@ -14,6 +14,28 @@
 @use "components/ui/_burgermenu.scss";
 // @use "components/ui/_pagination.scss";
 // @use "components/ui/_loader.scss";
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* Entry meta */
+.updated:not(.published) {
+	display: none;
+}
+
+/* Nav item */
+.nav-item:hover .dropdown-menu:not(.show){
+	display: block;
+}
+
+
+/* Pagination */
+.page-numbers.current > span {
+	background-color: gray;
+	color: #fff;
+}
 .page-wrapper{
 	overflow: hidden;
 }
