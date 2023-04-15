@@ -44,14 +44,9 @@ class Menus {
 	public function get_menu_id( $location ) {
 		// Get all locations
 		$locations = get_nav_menu_locations();
-		// Get object id by location
-        
-        // echo '<pre>';
-        // print_r($locations);
-        // wp_die();
-
-		$menu_object = wp_get_nav_menu_object( $locations[$location] );
-		return ! empty( $menu_object ) ? $menu_object->term_id : '';
+		// Get object id by location.
+		$menu_id = $locations[$location];
+		return ! empty( $menu_id ) ? $menu_id : '';
 	}
 
 	/**
