@@ -7,9 +7,9 @@
 get_header();
 global $wp_query;
 
-echo '<pre/>';
-print_r($wp_query);
-wp_die();
+// echo '<pre/>';
+// print_r($wp_query);
+// wp_die();
 
 ?>
 <div id="primary">
