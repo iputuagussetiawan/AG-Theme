@@ -26,7 +26,13 @@ class AG_THEME {
 	protected function set_hooks() {
 		// actions and filters
 		add_action( 'after_setup_theme', [ $this, 'setup_theme' ] );
+		add_action( 'widgets_init', [ $this, 'register_clock_widget' ] );
 		add_filter('get_custom_logo', [ $this, 'ag_change_logo_class' ] );
+		
+	}
+
+	function register_clock_widget() {
+		register_widget( 'AG_THEME\Inc\Clock_Widget' );
 	}
 
 	/**

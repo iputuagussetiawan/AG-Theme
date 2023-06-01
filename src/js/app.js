@@ -1,8 +1,11 @@
 import { Tooltip, Toast,Modal,Offcanvas} from 'bootstrap';
-import Navbar from './modules/Navbar'
-const navbar=new Navbar();
+// import Navbar from './modules/Navbar'
+import CustomClock from './modules/Clock'
+// const navbar=new Navbar();
+
 document.addEventListener("DOMContentLoaded", function(){
-    navbar.events();
+    //navbar.events();
+    const customClock=new CustomClock();
     document.querySelectorAll('.dropdown-menu').forEach(function(element){
         element.addEventListener('click', function (e) {
             e.stopPropagation();
@@ -19,8 +22,5 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     });
 }); 
-
-
-
 
 

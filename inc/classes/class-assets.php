@@ -37,6 +37,7 @@ class Assets {
 	public function register_scripts() {
 		// Register scripts.
 		wp_register_script( 'app-js', AG_DIR_URI . '/dist/js/app.js', [], filemtime( AG_DIR_PATH . '/dist/js/app.js' ), true );
+		wp_register_script( 'main-js', AG_DIR_URI . '/dist/js/app.js', ['jquery'], filemtime( AG_DIR_PATH . '/dist/js/app.js' ), true );
 		// Enqueue Scripts.
 		wp_enqueue_script( 'app-js' );
 	}
