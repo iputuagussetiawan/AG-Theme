@@ -6,6 +6,7 @@
  */
 get_header();
 ?>
+
 <div id="primary">
 	<main id="main" class="site-main mt-5" role="main">
 		<?php
@@ -52,6 +53,7 @@ get_header();
 
 		//get_template_part( 'template-parts/content-none' );
 		?>
+		
 	</main>
 </div>
 <?php
